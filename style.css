@@ -93,3 +93,19 @@ footer {
     margin-bottom: 0.5rem;
     border-radius: 4px;
 }
+
+/* 플레이어 버튼 스타일 */
+.play-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+.play-button:hover {
+    background-color: #2980b9;
+}
