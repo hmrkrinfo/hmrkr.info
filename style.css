@@ -1,0 +1,44 @@
+/* 전체 페이지의 기본 스타일 설정 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* 부드러운 회색 배경 */
+    color: #333; /* 어두운 회색 글씨 */
+    line-height: 1.6;
+}
+
+/* 헤더 스타일 */
+header {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* 메인 콘텐츠 영역 스타일 */
+main {
+    padding: 2rem;
+    max-width: 960px; /* 콘텐츠의 최대 너비 제한 */
+    margin: auto; /* 페이지 중앙 정렬 */
+}
+
+/* 푸터 스타일 */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
