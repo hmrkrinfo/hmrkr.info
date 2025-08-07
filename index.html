@@ -1,74 +1,25 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레코즈 레이블</title>
-    <link rel="stylesheet" href="style.css">
+    <title>My Record Label - Releases</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
-
+    <nav>
+        <a href="/index.html" class="logo">My Label</a>
+        <div class="nav-links">
+            <a href="/index.html">Releases</a>
+            <a href="#">Artists</a> <a href="#">About</a>   </div>
+    </nav>
+    
     <header>
-        <h1>레코즈 레이블</h1>
-        <p>아티스트와 그들의 음악을 소개합니다.</p>
+        <h1>Our Releases</h1>
     </header>
+    <main id="album-list-container">
+        </main>
 
-    <main>
-        <h2>아티스트</h2>
-
-        <ul class="track-list">
-    <li>
-        트랙 1
-        <button class="play-button" data-src="음악파일1.mp3">재생</button>
-    </li>
-    <li>
-        트랙 2
-        <button class="play-button" data-src="음악파일2.mp3">재생</button>
-    </li>
-    <li>
-        트랙 3
-        <button class="play-button" data-src="음악파일3.mp3">재생</button>
-    </li>
-</ul>
-
-        <section class="artist-album">
-            <img src="images/album-art-1.jpg" alt="첫 번째 앨범 앨범 커버" class="album-cover">
-            <div class="album-info">
-                <h3>앨범 제목 1</h3>
-                <p>아티스트명</p>
-                <p class="release-date">발매일: 2024.08.07</p>
-
-                <ul class="track-list">
-                    <li>트랙 1</li>
-                    <li>트랙 2</li>
-                    <li>트랙 3</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="artist-album">
-            <img src="images/album-art-2.jpg" alt="두 번째 앨범 앨범 커버" class="album-cover">
-            <div class="album-info">
-                <h3>앨범 제목 2</h3>
-                <p>아티스트명</p>
-                <p class="release-date">발매일: 2024.05.15</p>
-
-                <ul class="track-list">
-                    <li>트랙 1</li>
-                    <li>트랙 2</li>
-                    <li>트랙 3</li>
-                </ul>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 레코즈 레이블. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="/js/main.js"></script>
 </body>
-
 </html>

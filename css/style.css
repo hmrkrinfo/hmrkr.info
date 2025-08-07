@@ -1,0 +1,200 @@
+/* css/style.css */
+
+/* ----- 기본 & 내비게이션 스타일 (여기는 기존과 동일) ----- */
+body {
+    font-family: 'Pretendard Variable', sans-serif;
+    background-color: #ffffff; /* 배경색을 흰색으로 변경 */
+    color: #000000;          /* 기본 글자색을 검은색으로 변경 */
+    margin: 0;
+    padding-bottom: 90px; /* 푸터 높이만큼 */
+}
+
+nav {
+    background-color: #ffffff;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+/* ... (나머지 nav 스타일은 그대로) ... */
+
+
+/* ▼▼▼ 여기부터 새로운 홈페이지 스타일! ▼▼▼ */
+
+.main-content {
+    max-width: 720px; /* 'width' 대신 'max-width'로 변경 (반응형에 더 좋음) */
+    margin: 40px;     /* 'auto'를 빼서 왼쪽 정렬! 위아래 40px, 좌우에도 40px 여백 */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----- 헤더 섹션 ----- */
+.page-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 24px;
+}
+
+.header-logo {
+    width: 43px;
+    height: 43px;
+    border: 1px solid black;
+}
+
+.header-text p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/* ----- 인포 섹션 ----- */
+.info-section {
+    padding-top: 48px;
+    width: 100%;
+    padding-bottom: 48px;
+}
+
+.info-section p {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+
+/* ----- 릴리즈 섹션 (카드 리스트) ----- */
+.release-section {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px; /* 카드 사이의 간격 */
+}
+
+.release-card {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.release-card img {
+    width: 350px;
+    height: 350px;
+    background-color: #D9D9D9;
+    display: block;
+}
+
+.release-card .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+}
+
+.release-card .card-info {
+    display: flex;
+    gap: 12px;
+}
+
+.release-card .artist-name,
+.release-card .album-name,
+.release-card .card-time {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+
+/* */
+
+.site-footer-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    z-index: 1000;
+}
+
+.player-progress-bar {
+    height: 4px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.player-progress {
+    height: 100%;
+    width: 0%;
+    background-color: #000000;
+}
+
+.player-content {
+    height: calc(100% - 4px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 왼쪽, 오른쪽 영역을 양쪽 끝으로 */
+    padding: 0 20px; /* 화면 좌우에 약간의 여백을 줌 */
+}
+
+/* 왼쪽 영역 (컨트롤 + 트랙정보) */
+.player-left {
+    display: flex;
+    align-items: center;
+    gap: 24px; /* 컨트롤과 트랙정보 사이 간격 */
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 24px; /* 아이콘 크기 살짝 조정 */
+    height: 24px;
+    color: #333333;
+}
+
+.control-btn svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    transition: color 0.2s ease;
+}
+
+.control-btn:hover {
+    color: #000000;
+}
+
+.play-btn {
+    width: 24px;
+    height: 24px;
+}
+
+/* 트랙 정보 */
+.player-track-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.player-track-info .artist-name,
+.player-track-info .track-title {
+    font-size: 1rem;
+    line-height: 18px;
+}
+
+/* 오른쪽 시간 영역 */
+.player-time-display {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1rem;
+    line-height: 18px;
+}

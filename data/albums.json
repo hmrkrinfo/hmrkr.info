@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Cosmic Wanderer",
+    "artist": "Starlight Echoes",
+    "releaseDate": "2025-07-15",
+    "coverImage": "https://via.placeholder.com/400?text=Cosmic+Wanderer",
+    "tracks": [
+      {
+        "title": "First Signal",
+        "src": "/audio/cosmic-wanderer/01-main-track.mp3"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Midnight Haze",
+    "artist": "Neon Bloom",
+    "releaseDate": "2025-06-20",
+    "coverImage": "https://via.placeholder.com/400?text=Midnight+Haze",
+    "tracks": [
+      {
+        "title": "City Lights",
+        "src": "/audio/midnight-haze/01-main-track.mp3"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Oceanic Dreams",
+    "artist": "Tidal Waves",
+    "releaseDate": "2025-05-10",
+    "coverImage": "https://via.placeholder.com/400?text=Oceanic+Dreams",
+    "tracks": [
+      { "title": "Deep Blue", "src": "/audio/oceanic-dreams/01-main-track.mp3" }
+    ]
+  }
+]

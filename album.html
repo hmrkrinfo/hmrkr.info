@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Details</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="main-content">
+        <header class="page-header">
+            <img src="assets/images/logo/hmr_brand_logo.jpg" alt="Label Logo" class="header-logo">
+            <div class="header-text">
+                <p>Release information from hustle muscle records</p>
+                <p>-</p>
+            </div>
+        </header>
+
+        <section class="info-section">
+            <svg width="24" height="24" viewBox="3 1 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="1.5">
+                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                <path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2zM9 9h1M9 13h6M9 17h6" />
+            </svg>
+            <p>Easymind’s New Album is Out Now ~_~</p>
+            <p>For more<br />└ Linktree<br />ㅁㄴㅇㅎ</p>
+        </section>
+
+        <section class="release-section">
+            <article class="release-card">
+                <img src="https://placehold.co/350x350" alt="Album Art">
+                <div class="card-footer">
+                    <div class="card-info">
+                        <span class="artist-name">Artist Name</span>
+                        <span class="album-name">Album Name</span>
+                    </div>
+                    <div class="card-time">00:00:00</div>
+                </div>
+            </article>
+
+            <article class="release-card">
+                <img src="https://placehold.co/350x350" alt="Album Art">
+                <div class="card-footer">
+                    <div class="card-info">
+                        <span class="artist-name">Artist Name</span>
+                        <span class="album-name">Album Name</span>
+                    </div>
+                    <div class="card-time">00:00:00</div>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <footer class="site-footer-player">
+        <div class="player-progress-bar">
+            <div class="player-progress"></div>
+        </div>
+
+        <div class="player-content">
+            <div class="player-left">
+                <div class="player-controls">
+                    <button class="control-btn" id="prev-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 6h2v12H6zm3.5 6 8.5 6V6l-8.5 6z"></path>
+                        </svg>
+                    </button>
+                    <button class="control-btn play-btn" id="play-pause-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5.14v14l11-7-11-7z"></path>
+                        </svg>
+                    </button>
+                    <button class="control-btn" id="next-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 6h2v12h-2zm-4.5 6L6 6v12l5.5-6z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="player-track-info">
+                    <span class="artist-name">Easymind</span>
+                    <span class="track-title">unknock</span>
+                </div>
+            </div>
+
+            <div class="player-time-display">
+                <span id="current-time">00:00:00</span>
+                <span>of</span>
+                <span id="duration">00:00:00</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<script src="/js/main.js"></script>
+</body>
+
+</html>
