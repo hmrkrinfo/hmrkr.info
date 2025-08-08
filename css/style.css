@@ -1,122 +1,129 @@
-/* css/style.css */
+/* =================================== */
+/* 기본 스타일 (최종 수정본)      */
+/* =================================== */
 
-/* ----- 기본 & 내비게이션 스타일 (여기는 기존과 동일) ----- */
+html { font-size: 75%; }
+
 body {
     font-family: 'Pretendard Variable', sans-serif;
-    background-color: #ffffff; /* 배경색을 흰색으로 변경 */
-    color: #000000;          /* 기본 글자색을 검은색으로 변경 */
-    margin: 0;
-    padding-bottom: 90px; /* 푸터 높이만큼 */
-}
-
-nav {
     background-color: #ffffff;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #e0e0e0;
+    color: #000000;
+    margin: 0;
 }
-/* ... (나머지 nav 스타일은 그대로) ... */
+.site-wrapper { display: flex; }
 
-
-/* ▼▼▼ 여기부터 새로운 홈페이지 스타일! ▼▼▼ */
-
-.main-content {
-    max-width: 720px; /* 'width' 대신 'max-width'로 변경 (반응형에 더 좋음) */
-    margin: 40px;     /* 'auto'를 빼서 왼쪽 정렬! 위아래 40px, 좌우에도 40px 여백 */
-    display: flex;
-    flex-direction: column;
-}
-
-/* ----- 헤더 섹션 ----- */
+/* ----- 헤더 섹션 (Grid 레이아웃) ----- */
 .page-header {
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
     align-items: center;
-    gap: 12px;
     padding-bottom: 24px;
 }
 
+.header-logo-link {
+    /* 로고가 1행부터 3행 전까지(즉, 1~2행) 공간을 차지하도록 설정 */
+    grid-row: 1 / 3;
+}
+
 .header-logo {
-    width: 43px;
-    height: 43px;
+    width: 36px;
+    height: 36px;
     border: 1px solid black;
+    display: block;
 }
 
-.header-text p {
+/* 텍스트 줄바꿈 및 스타일 초기화 */
+.header-line-1,
+.header-line-2 {
     margin: 0;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
-/* ----- 인포 섹션 ----- */
-.info-section {
-    padding-top: 48px;
-    width: 100%;
-    padding-bottom: 48px;
+/* ----- 메인 콘텐츠 레이아웃 ----- */
+.main-content {
+    margin-top: 40px;
+    width: 800px;
+    flex-shrink: 0;
+    padding: 0 40px;
+    /* ▼▼▼ 푸터를 아래로 밀어내는 마법 ▼▼▼ */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.info-section p {
-    margin: 0 0 12px 0;
-    font-size: 14px;
-    line-height: 18px;
+.content-body {
+    flex-grow: 1; /* 이 상자가 남는 공간을 모두 차지해서 푸터를 밀어냄 */
+}
+
+/* ----- 오른쪽 배경이미지 ----- */
+.background-area {
+    flex-grow: 1;
+    background-image: url('https://placehold.co/1200x1000/cccccc/ffffff?text=Background');
+    background-size: cover;
+    background-position: center;
 }
 
 
-/* ----- 릴리즈 섹션 (카드 리스트) ----- */
+/* ----- 폰트 스타일 ----- */
+.header-text p,
+.info-section p,
+.release-card .album-name,
+.player-track-info .track-title,
+.player-time-display {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.artist-name {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #6c6c6c;
+}
+
+/* ----- 릴리즈 섹션 ----- */
 .release-section {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px; /* 카드 사이의 간격 */
+    flex-wrap: wrap;
+    gap: 30px 20px;
 }
 
 .release-card {
-    width: 350px;
-    display: flex;
-    flex-direction: column;
+    width: calc(50% - 10px);
+    cursor: pointer;
 }
 
 .release-card img {
-    width: 350px;
-    height: 350px;
-    background-color: #D9D9D9;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #D9D9DD;
     display: block;
 }
 
 .release-card .card-footer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding-top: 12px;
 }
 
 .release-card .card-info {
     display: flex;
-    gap: 12px;
+    flex-direction: column;
 }
 
-.release-card .artist-name,
-.release-card .album-name,
-.release-card .card-time {
-    font-size: 14px;
-    line-height: 18px;
-}
-
-
-/* */
+/* =================================== */
+/* 푸터 플레이어 스타일 (수정본) */
+/* =================================== */
 
 .site-footer-player {
-    position: fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    height: 60px;
-    background-color: #ffffff;
+    height: 54px;
     border-top: 1px solid #e0e0e0;
-    z-index: 1000;
+    margin-top: 40px;
 }
 
 .player-progress-bar {
@@ -135,20 +142,19 @@ nav {
     height: calc(100% - 4px);
     display: flex;
     align-items: center;
-    justify-content: space-between; /* 왼쪽, 오른쪽 영역을 양쪽 끝으로 */
-    padding: 0 20px; /* 화면 좌우에 약간의 여백을 줌 */
+    justify-content: space-between;
 }
 
-/* 왼쪽 영역 (컨트롤 + 트랙정보) */
 .player-left {
     display: flex;
     align-items: center;
-    gap: 24px; /* 컨트롤과 트랙정보 사이 간격 */
+    gap: 16px;
 }
 
 .player-controls {
     display: flex;
     align-items: center;
+    gap: 6px;
 }
 
 .control-btn {
@@ -156,8 +162,8 @@ nav {
     border: none;
     padding: 0;
     cursor: pointer;
-    width: 24px; /* 아이콘 크기 살짝 조정 */
-    height: 24px;
+    width: 26px;
+    height: 26px;
     color: #333333;
 }
 
@@ -173,28 +179,74 @@ nav {
 }
 
 .play-btn {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
 }
 
-/* 트랙 정보 */
 .player-track-info {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.player-track-info .artist-name,
-.player-track-info .track-title {
-    font-size: 1rem;
-    line-height: 18px;
-}
 
-/* 오른쪽 시간 영역 */
-.player-time-display {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 1rem;
-    line-height: 18px;
+/* =================================== */
+/* 반응형 스타일 (수정본)      */
+/* =================================== */
+
+@media (max-width: 800px) {
+    .site-wrapper {
+        flex-direction: column;
+    }
+
+    .main-content {
+        width: auto;
+        padding: 0 20px;
+    }
+
+    .background-area {
+        display: none;
+    }
+
+    body {
+        padding-bottom: 54px;
+    }
+    .site-footer-player {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        margin-top: 0;
+    }
+    .player-content {
+        max-width: none;
+        padding: 0 20px;
+    }
+} /* <--- 이 닫는 괄호가 누락되었습니다 */
+
+
+/* 720px 미디어 쿼리는 800px 규칙에 통합 가능하여 제거했습니다 */
+
+
+@media (max-width: 480px) {
+    html {
+        font-size: 68.75%; /* 모바일 폰트 11px */
+    }
+
+    .release-section {
+        flex-direction: column;
+    }
+
+    .release-card {
+        width: 100%;
+    }
+
+    .release-card .card-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+    
+    .player-time-display {
+        display: none;
+    }
 }

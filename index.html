@@ -3,23 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Record Label - Releases</title>
+    <title>My Record Label</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <nav>
-        <a href="/index.html" class="logo">My Label</a>
-        <div class="nav-links">
-            <a href="/index.html">Releases</a>
-            <a href="#">Artists</a> <a href="#">About</a>   </div>
-    </nav>
-    
-    <header>
-        <h1>Our Releases</h1>
-    </header>
-    <main id="album-list-container">
+    <div class="site-wrapper">
+        <main class="main-content">
+            <div class="content-body">
+<header class="page-header">
+    <a href="/index.html" class="header-logo-link">
+        <img src="/assets/images/logo/hmr_brand_logo.jpg" alt="Label Logo" class="header-logo">
+    </a>
+    <p class="header-line-1">Release information from hustle muscle records</p>
+    <p class="header-line-2">-</p>
+</header>
+
+                <section class="info-section">
+                    <p>Easymind’s New Album is Out Now ~_~</p>
+                    <p>For more<br/>└ Linktree</p>
+                </section>
+
+                <section class="release-section">
+                    </section>
+            </div>
+
+            <footer class="site-footer-player">
+                <div class="player-progress-bar">
+                    <div class="player-progress"></div>
+                </div>
+                <div class="player-content">
+                    <div class="player-left">
+                        <div class="player-controls">
+                            <button class="control-btn" id="prev-btn"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6l-8.5 6z"></path></svg></button>
+                            <button class="control-btn play-btn" id="play-pause-btn"><svg viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7z"></path></svg></button>
+                            <button class="control-btn" id="next-btn"><svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zm-4.5 6L6 6v12l5.5-6z"></path></svg></button>
+                        </div>
+                        <div class="player-track-info">
+                            <span class="artist-name"></span>
+                            <span class="track-title"></span>
+                        </div>
+                    </div>
+                    <div class="player-time-display">
+                        <span id="current-time"></span>
+                        <span id="time-separator">of</span>
+                        <span id="duration"></span>
+                    </div>
+                </div>
+            </footer>
         </main>
 
+        <aside class="background-area">
+        </aside>
+    </div>
+
+    <script src="/js/player.js"></script>
     <script src="/js/main.js"></script>
 </body>
 </html>
