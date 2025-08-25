@@ -3,16 +3,15 @@
 /* =================================== */
 
 html {
-    font-size: 75%; /* 기본 폰트 크기 12px */
+  font-size: 75%; /* 기본 폰트 크기 12px */
 }
 body {
-    font-family: 'Pretendard Variable', sans-serif;
-    background-color: #ffffff;
-    color: #000000;
-    margin: 0;
-    padding-bottom: 54px; /* 푸터가 콘텐츠를 가리지 않도록 공간 확보 */
+  font-family: "Pretendard Variable", sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+  padding-bottom: 54px; /* 푸터가 콘텐츠를 가리지 않도록 공간 확보 */
 }
-
 
 .site-wrapper {
   display: flex;
@@ -89,6 +88,7 @@ body {
 
 /* ----- 릴리즈 섹션 ----- */
 .release-section {
+  padding-top: 40px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
