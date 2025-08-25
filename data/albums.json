@@ -1,13 +1,13 @@
 [
   {
     "id": 1,
-    "title": "Cosmic Wanderer",
-    "artist": "Starlight Echoes",
-    "coverImage": "https://via.placeholder.com/400?text=Midnight+Haze",
+    "title": "unknock",
+    "artist": "Easymind",
+    "coverImage": "assets/images/albums/unknock/(cover_1080px) Easymind - unknock.jpg",
     "totalDuration": "0:32:15",
     "tracks": [
       {
-        "title": "First Signal",
+        "title": "unknock",
         "src": "/audio/hmr-web-audio-test.mp3"
       }
     ]
@@ -25,18 +25,6 @@
         "title": "City Lights",
         "src": "/audio/midnight-haze/01-main-track.mp3"
       }
-    ]
-  },
-
-  {
-    "id": 3,
-    "title": "Oceanic Dreams",
-    "artist": "Tidal Waves",
-    "releaseDate": "2025-05-10",
-    "coverImage": "https://via.placeholder.com/400?text=Oceanic+Dreams",
-    "totalDuration": "0:32:15",
-    "tracks": [
-      { "title": "Deep Blue", "src": "/audio/oceanic-dreams/01-main-track.mp3" }
     ]
   }
 ]
